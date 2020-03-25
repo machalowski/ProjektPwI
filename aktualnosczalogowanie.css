@@ -64,9 +64,31 @@ nav a:hover {
 
 .lacznik {
     width: 100%;
-    height: 42px;
+    height: 90px;
     background-color: rgb(236, 236, 236);
     margin: 0;
+    
+}
+
+.lacznik li {
+    margin-top: 20px;
+    width: 30%;
+    height: 30px;
+    display: inline-block; 
+    border: #800000 solid 3px;
+    text-align: center;
+    
+    background-color: blue;
+
+    padding-top: 7px;
+    margin-right: 20px;
+    
+}
+
+.lacznik a {
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    text-decoration: none;
 }
 
 .szary {
