@@ -9,9 +9,6 @@ body {
   
 }
 
-::-webkit-scrollbar {
-    display: none;
-}
 
 main {
     background-color: rgb(236, 236, 236);

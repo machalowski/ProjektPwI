@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 24 Mar 2020, 21:43
+-- Czas generowania: 25 Mar 2020, 16:10
 -- Wersja serwera: 10.4.11-MariaDB
 -- Wersja PHP: 7.4.3
 
@@ -35,6 +35,15 @@ CREATE TABLE `komentarze` (
   `plusowanie` int(99) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Zrzut danych tabeli `komentarze`
+--
+
+INSERT INTO `komentarze` (`komentarz_id`, `id_fk`, `tresc`, `plusowanie`) VALUES
+(1, 1, 'chcesz namiary na slownik?', 0),
+(2, 2, 'bardzo dobry artukul', 0),
+(3, 1, 'aaaaaaaaaaaaaaa', 0);
+
 -- --------------------------------------------------------
 
 --
@@ -47,6 +56,14 @@ CREATE TABLE `posty` (
   `tekst` varchar(10000) NOT NULL,
   `streszczenie` varchar(150) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Zrzut danych tabeli `posty`
+--
+
+INSERT INTO `posty` (`post_id`, `tytul`, `tekst`, `streszczenie`) VALUES
+(1, 'przelom w walce z wirusem', 'aaaaaaaaaaa aaaaaaaaaaaaaaa aaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa vaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa wfawgasegeshseheshse', 'aaaaaaaaaaaaaa aaaaaaaaaa aaaaaa'),
+(2, 'ss sssssssssss ssssss sssczepionki nie ma', 'wwwwwwwww wwwwwwwwwwwww wwwwwwwwwwww wwwwwwwwwwwww wwwwwwwwwwwwwwwwwwwww wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww v', 'wwwwwwwww w ww w w ');
 
 -- --------------------------------------------------------
 
@@ -61,6 +78,14 @@ CREATE TABLE `uzytkownicy` (
   `imie` varchar(50) NOT NULL,
   `email` varchar(70) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Zrzut danych tabeli `uzytkownicy`
+--
+
+INSERT INTO `uzytkownicy` (`id_uzytkownik`, `login`, `haslo`, `imie`, `email`) VALUES
+(1, 'Machalowski', '12345678', 'Mateusz', 'mateusz@gmail.com'),
+(2, 'Tomek35235', '677843', 'Tomasz', 'tomek@gmail.com');
 
 --
 -- Indeksy dla zrzutów tabel
@@ -93,19 +118,19 @@ ALTER TABLE `uzytkownicy`
 -- AUTO_INCREMENT dla tabeli `komentarze`
 --
 ALTER TABLE `komentarze`
-  MODIFY `komentarz_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `komentarz_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT dla tabeli `posty`
 --
 ALTER TABLE `posty`
-  MODIFY `post_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `post_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT dla tabeli `uzytkownicy`
 --
 ALTER TABLE `uzytkownicy`
-  MODIFY `id_uzytkownik` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_uzytkownik` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Ograniczenia dla zrzutów tabel
