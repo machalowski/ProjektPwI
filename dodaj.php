@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -11,11 +14,21 @@
     
     <nav>
     <ul>
-        <li><a href="index.html">Strona główna</a></li>
-        <li><a class="menu active" href="aktualnoscizalogowanie.html">Aktualności</a></li>
-        <li><a href="Owirusie.html">O wirusie</a></li>
-        <li><a href="Sytuacja.html">Sytuacja w kraju</a></li>
-        <li><a href="logowanie.html">Wyloguj się</a></li>
+        <li><a href="index.php">Strona główna</a></li>
+        <li><a class="menu active" href="aktualnoscizalogowanie.php">Aktualności</a></li>
+        <li><a href="Owirusie.php">O wirusie</a></li>
+        <li><a href="Sytuacja.php">Sytuacja w kraju</a></li>
+        <li> <?php
+
+        if(!isset($_SESSION['zalogowany']))
+        {
+             echo '<a href="logowanie.html">Logowanie</a>';
+        }
+        else
+        {
+             echo '<a href="Wyloguj.php">Wyloguj się '.$_SESSION['login'].'</a>';
+        } 
+?></li>
       </ul> 
     </nav>
 
