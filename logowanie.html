@@ -11,10 +11,10 @@
     
     <nav>
     <ul>
-        <li><a href="index.html">Strona główna</a></li>
-        <li><a href="aktualnosc.html">Aktualności</a></li>
-        <li><a href="Owirusie.html">O wirusie</a></li>
-        <li><a href="Sytuacja.html">Sytuacja w kraju</a></li>
+        <li><a href="index.php">Strona główna</a></li>
+        <li><a href="aktualnosc.php">Aktualności</a></li>
+        <li><a href="Owirusie.php">O wirusie</a></li>
+        <li><a href="Sytuacja.php">Sytuacja w kraju</a></li>
         <li><a class="menu active" href="logowanie.html">Logowanie</a></li>
       </ul> 
     </nav>
@@ -23,7 +23,7 @@
         <div class="contener">
 
             <div id="panel">
-                <form>
+                <form action="logowanie.php" method="POST">
                     <label for="username">Nazwa użytkownika:</label>
                     <input type="text" id="username" name="username">
                     <label for="password">Hasło:</label>

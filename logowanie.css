@@ -73,7 +73,7 @@ footer {
     -webkit-box-shadow: 0 0 2px silver; 
     -moz-box-shadow: 0 0 2px silver; 
     box-shadow: 0 0 2px silver;
-    height: 300px;
+    /* height: 300px; */
     }
 
 form {
@@ -89,7 +89,7 @@ color: #696969;
 font-size: 17px;
 }
 
-#username, #password {
+#username, #password, #imie, #email{
 display: block;
 width: 360px; 
 margin: 0 auto;
